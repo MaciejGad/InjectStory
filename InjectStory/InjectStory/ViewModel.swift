@@ -12,14 +12,25 @@ protocol ViewModel {
     init()
 }
 
-class SpecificViewModel: ViewModel {
-    required init() {
-        
+class ZupaViewModel:ViewModel {
+    required init() {}
+}
+
+protocol CatViewModel: ViewModel {
+    func mow() -> String
+}
+
+class SpecificViewModel: CatViewModel {
+    required init() {}
+    
+    func mow()-> String{
+        return "mow"
     }
 }
 
-class TestViewModel: ViewModel {
-    required init() {
-        
+class TestViewModel: CatViewModel {
+    required init() {}
+    func mow()-> String{
+        return "mow test"
     }
 }

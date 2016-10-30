@@ -13,15 +13,17 @@ protocol Injectable {
 }
 
 
+
+
 class InjectionFabric {
     
-    class func inject<T>(name n:String, in injectable:T.Type) -> ViewModel where T:Injectable {
+    class func inject<T, U>(name n:String, in injectable:T.Type) -> U where T:Injectable {
         let name = nameOfViewModel(name: n, in: T.self)
-        if let model = sharedInstance.listOfReplacements[name] {
+        if let model = sharedInstance.listOfReplacements[name] as? U {
             sharedInstance.listOfReplacements.removeValue(forKey: name)
             return model
         }
-        return injectable.injection(name: n)
+        return injectable.injection(name: n) as! U
     }
     
     class func replaceViewModel<T>(name n:String, in injectable:T.Type, with model:ViewModel) where T:Injectable {
@@ -34,7 +36,7 @@ class InjectionFabric {
         return String(describing: T.self) + "." + n
     }
     
-    private var listOfReplacements = Dictionary<String, ViewModel>()
+    private var listOfReplacements = Dictionary<String, Any>()
     private static let sharedInstance = InjectionFabric()
 }
 

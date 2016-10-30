@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let viewModel:ViewModel
+    let viewModel:CatViewModel
+    @IBOutlet weak var mowLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         viewModel = InjectionFabric.inject(name: "viewModel", in: ViewController.self)
@@ -18,14 +19,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mowLabel.text = viewModel.mow()
     }
 }
 
 
 extension ViewController:Injectable {
-
     internal static func injection(name:String) -> ViewModel {
-        return SpecificViewModel()
+        return ZupaViewModel()
     }
     
 }
