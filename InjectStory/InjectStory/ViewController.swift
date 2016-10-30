@@ -9,17 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let viewModel:ViewModel
+    
+    required init?(coder aDecoder: NSCoder) {
+        viewModel = InjectionFabric.inject(name: "viewModel", in: ViewController.self)
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
+
+extension ViewController:Injectable {
+
+    internal static func injection(name:String) -> ViewModel {
+        return SpecificViewModel()
+    }
+    
+}

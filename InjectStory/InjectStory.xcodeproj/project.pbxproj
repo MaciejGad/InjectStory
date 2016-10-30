@@ -13,6 +13,8 @@
 		D904947C1DC650BD009E817E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D904947B1DC650BD009E817E /* Assets.xcassets */; };
 		D904947F1DC650BD009E817E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D904947D1DC650BD009E817E /* LaunchScreen.storyboard */; };
 		D904948A1DC650BD009E817E /* InjectStoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90494891DC650BD009E817E /* InjectStoryTests.swift */; };
+		D90494951DC659AC009E817E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90494941DC659AC009E817E /* ViewModel.swift */; };
+		D90494971DC659E1009E817E /* InjectionFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90494961DC659E1009E817E /* InjectionFabric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		D90494851DC650BD009E817E /* InjectStoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InjectStoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90494891DC650BD009E817E /* InjectStoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectStoryTests.swift; sourceTree = "<group>"; };
 		D904948B1DC650BD009E817E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D90494941DC659AC009E817E /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D90494961DC659E1009E817E /* InjectionFabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectionFabric.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				D90494741DC650BD009E817E /* AppDelegate.swift */,
 				D90494761DC650BD009E817E /* ViewController.swift */,
+				D90494961DC659E1009E817E /* InjectionFabric.swift */,
+				D90494941DC659AC009E817E /* ViewModel.swift */,
 				D90494781DC650BD009E817E /* Main.storyboard */,
 				D904947B1DC650BD009E817E /* Assets.xcassets */,
 				D904947D1DC650BD009E817E /* LaunchScreen.storyboard */,
@@ -147,11 +153,13 @@
 					D90494701DC650BD009E817E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 3M78FF338K;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					D90494841DC650BD009E817E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 3M78FF338K;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D90494701DC650BD009E817E;
 					};
@@ -202,6 +210,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D90494771DC650BD009E817E /* ViewController.swift in Sources */,
+				D90494951DC659AC009E817E /* ViewModel.swift in Sources */,
+				D90494971DC659E1009E817E /* InjectionFabric.swift in Sources */,
 				D90494751DC650BD009E817E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
