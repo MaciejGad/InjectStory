@@ -1,0 +1,6 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'InjectStory' do
+pod 'R.swift', '~> 3.0'
+end

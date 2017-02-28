@@ -8,29 +8,24 @@
 
 import Foundation
 
-protocol ViewModel {
-    init()
+class DogViewModel {
+    func woof() -> String {
+        return "woof, woof"
+    }
 }
 
-class ZupaViewModel:ViewModel {
-    required init() {}
-}
-
-protocol CatViewModel: ViewModel {
+protocol CatViewModelProtocol {
     func mow() -> String
 }
 
-class SpecificViewModel: CatViewModel {
-    required init() {}
-    
-    func mow()-> String{
+class CatViewModel: CatViewModelProtocol {
+    func mow() -> String{
         return "mow"
     }
 }
 
-class TestViewModel: CatViewModel {
-    required init() {}
-    func mow()-> String{
+class TestViewModel: CatViewModelProtocol {
+    func mow() -> String{
         return "mow test"
     }
 }

@@ -25,7 +25,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InjectStory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewController" id="BYZ-38-t0r" customClass="ViewController" customModule="InjectStory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,7 +42,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qt-jx-nGO">
                                 <state key="normal" title="Test Mow"/>
                                 <connections>
-                                    <segue destination="4zM-7r-YyY" kind="show" id="pPr-f4-e2l"/>
+                                    <segue destination="92w-eD-o3n" kind="show" id="RI8-k8-rA6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,37 +64,36 @@
             <point key="canvasLocation" x="132" y="82"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="ccB-LF-zH4">
+        <scene sceneID="SW0-3O-mna">
             <objects>
-                <viewController id="4zM-7r-YyY" customClass="ViewController" customModule="InjectStory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="92w-eD-o3n" customClass="ViewController" customModule="InjectStory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gMw-kd-bez"/>
-                        <viewControllerLayoutGuide type="bottom" id="Bvd-Dk-HPR"/>
+                        <viewControllerLayoutGuide type="top" id="TcC-Lo-gXN"/>
+                        <viewControllerLayoutGuide type="bottom" id="xbR-XR-N1m"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="geM-ck-Dh4">
+                    <view key="view" contentMode="scaleToFill" id="e6v-SG-65g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvI-aL-IY6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnA-Vb-Gfi">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YvI-aL-IY6" firstAttribute="top" secondItem="gMw-kd-bez" secondAttribute="bottom" constant="20" id="4Sm-pQ-T6N"/>
-                            <constraint firstItem="YvI-aL-IY6" firstAttribute="centerX" secondItem="geM-ck-Dh4" secondAttribute="centerX" id="itI-og-9Ws"/>
+                            <constraint firstItem="rnA-Vb-Gfi" firstAttribute="top" secondItem="TcC-Lo-gXN" secondAttribute="bottom" constant="18" id="gCt-Ov-12b"/>
+                            <constraint firstItem="rnA-Vb-Gfi" firstAttribute="centerX" secondItem="e6v-SG-65g" secondAttribute="centerX" id="z1B-73-cCk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="w0F-Ub-LC2"/>
                     <connections>
-                        <outlet property="mowLabel" destination="YvI-aL-IY6" id="p1e-6r-aQE"/>
+                        <outlet property="mowLabel" destination="rnA-Vb-Gfi" id="iP8-Iy-xCG"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1ev-lv-Tac" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ss-2g-W1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921" y="81"/>
+            <point key="canvasLocation" x="970" y="81"/>
         </scene>
     </scenes>
 </document>

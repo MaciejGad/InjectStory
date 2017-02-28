@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11C0092C2E2B36DADE17FBF9 /* Pods_InjectStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6687FD6C7F7E4D8198F97B35 /* Pods_InjectStory.framework */; };
 		D90494751DC650BD009E817E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90494741DC650BD009E817E /* AppDelegate.swift */; };
 		D90494771DC650BD009E817E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90494761DC650BD009E817E /* ViewController.swift */; };
 		D904947A1DC650BD009E817E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90494781DC650BD009E817E /* Main.storyboard */; };
@@ -14,7 +15,8 @@
 		D904947F1DC650BD009E817E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D904947D1DC650BD009E817E /* LaunchScreen.storyboard */; };
 		D904948A1DC650BD009E817E /* InjectStoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90494891DC650BD009E817E /* InjectStoryTests.swift */; };
 		D90494951DC659AC009E817E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90494941DC659AC009E817E /* ViewModel.swift */; };
-		D90494971DC659E1009E817E /* InjectionFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90494961DC659E1009E817E /* InjectionFabric.swift */; };
+		D90494971DC659E1009E817E /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90494961DC659E1009E817E /* Injection.swift */; };
+		D96108D41DC78D1B00271CC1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96108D31DC78D1B00271CC1 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E1C00A853EEC9529F6DA550 /* Pods-InjectStory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InjectStory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InjectStory/Pods-InjectStory.debug.xcconfig"; sourceTree = "<group>"; };
+		6687FD6C7F7E4D8198F97B35 /* Pods_InjectStory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InjectStory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D6F39A7B11D48AF32F628AA /* Pods-InjectStory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InjectStory.release.xcconfig"; path = "Pods/Target Support Files/Pods-InjectStory/Pods-InjectStory.release.xcconfig"; sourceTree = "<group>"; };
 		D90494711DC650BD009E817E /* InjectStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InjectStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90494741DC650BD009E817E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D90494761DC650BD009E817E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +44,8 @@
 		D90494891DC650BD009E817E /* InjectStoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectStoryTests.swift; sourceTree = "<group>"; };
 		D904948B1DC650BD009E817E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D90494941DC659AC009E817E /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		D90494961DC659E1009E817E /* InjectionFabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectionFabric.swift; sourceTree = "<group>"; };
+		D90494961DC659E1009E817E /* Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		D96108D31DC78D1B00271CC1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C0092C2E2B36DADE17FBF9 /* Pods_InjectStory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +67,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C18BDE56E7A19E2EC011F08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6687FD6C7F7E4D8198F97B35 /* Pods_InjectStory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7995860CC5D1A3DDC46FAEC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E1C00A853EEC9529F6DA550 /* Pods-InjectStory.debug.xcconfig */,
+				6D6F39A7B11D48AF32F628AA /* Pods-InjectStory.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D90494681DC650BD009E817E = {
 			isa = PBXGroup;
 			children = (
 				D90494731DC650BD009E817E /* InjectStory */,
 				D90494881DC650BD009E817E /* InjectStoryTests */,
 				D90494721DC650BD009E817E /* Products */,
+				7995860CC5D1A3DDC46FAEC2 /* Pods */,
+				2C18BDE56E7A19E2EC011F08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,9 +107,10 @@
 		D90494731DC650BD009E817E /* InjectStory */ = {
 			isa = PBXGroup;
 			children = (
+				D96108D31DC78D1B00271CC1 /* R.generated.swift */,
 				D90494741DC650BD009E817E /* AppDelegate.swift */,
 				D90494761DC650BD009E817E /* ViewController.swift */,
-				D90494961DC659E1009E817E /* InjectionFabric.swift */,
+				D90494961DC659E1009E817E /* Injection.swift */,
 				D90494941DC659AC009E817E /* ViewModel.swift */,
 				D90494781DC650BD009E817E /* Main.storyboard */,
 				D904947B1DC650BD009E817E /* Assets.xcassets */,
@@ -109,9 +136,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D904948E1DC650BD009E817E /* Build configuration list for PBXNativeTarget "InjectStory" */;
 			buildPhases = (
+				729C13F00930E89CE3945CDD /* [CP] Check Pods Manifest.lock */,
+				D96108D21DC782DF00271CC1 /* R.Swift */,
 				D904946D1DC650BD009E817E /* Sources */,
 				D904946E1DC650BD009E817E /* Frameworks */,
 				D904946F1DC650BD009E817E /* Resources */,
+				7EF73E44F7328F731E051340 /* [CP] Embed Pods Frameworks */,
+				7493BEB8877DDB21D8B4D010 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,6 +235,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		729C13F00930E89CE3945CDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7493BEB8877DDB21D8B4D010 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InjectStory/Pods-InjectStory-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EF73E44F7328F731E051340 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InjectStory/Pods-InjectStory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D96108D21DC782DF00271CC1 /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.Swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D904946D1DC650BD009E817E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -211,7 +304,8 @@
 			files = (
 				D90494771DC650BD009E817E /* ViewController.swift in Sources */,
 				D90494951DC659AC009E817E /* ViewModel.swift in Sources */,
-				D90494971DC659E1009E817E /* InjectionFabric.swift in Sources */,
+				D96108D41DC78D1B00271CC1 /* R.generated.swift in Sources */,
+				D90494971DC659E1009E817E /* Injection.swift in Sources */,
 				D90494751DC650BD009E817E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +443,7 @@
 		};
 		D904948F1DC650BD009E817E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E1C00A853EEC9529F6DA550 /* Pods-InjectStory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3M78FF338K;
@@ -362,6 +457,7 @@
 		};
 		D90494901DC650BD009E817E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D6F39A7B11D48AF32F628AA /* Pods-InjectStory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3M78FF338K;
@@ -422,6 +518,7 @@
 				D90494901DC650BD009E817E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D90494911DC650BD009E817E /* Build configuration list for PBXNativeTarget "InjectStoryTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +527,7 @@
 				D90494931DC650BD009E817E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

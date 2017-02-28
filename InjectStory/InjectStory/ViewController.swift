@@ -9,11 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let viewModel:CatViewModel
+    
+    static let viewModelInjection = Injection<CatViewModelProtocol>({
+        //return DogViewModel()
+        //returning wrong class in impossible
+        return CatViewModel()
+    })
+    
+    let viewModel:CatViewModelProtocol = viewModelInjection.inject()
+
     @IBOutlet weak var mowLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
-        viewModel = InjectionFabric.inject(name: "viewModel", in: ViewController.self)
         super.init(coder: aDecoder)
     }
     
@@ -23,10 +30,3 @@ class ViewController: UIViewController {
     }
 }
 
-
-extension ViewController:Injectable {
-    internal static func injection(name:String) -> ViewModel {
-        return ZupaViewModel()
-    }
-    
-}
