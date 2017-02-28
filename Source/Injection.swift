@@ -1,5 +1,5 @@
 //
-//  InjectionFabric.swift
+//  Injection.swift
 //  InjectStory
 //
 //  Created by Maciej Gad on 30.10.2016.

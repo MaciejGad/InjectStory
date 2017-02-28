@@ -192,13 +192,11 @@
 				TargetAttributes = {
 					D90494701DC650BD009E817E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 3M78FF338K;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					D90494841DC650BD009E817E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 3M78FF338K;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D90494701DC650BD009E817E;
@@ -455,8 +453,9 @@
 			baseConfigurationReference = 3E1C00A853EEC9529F6DA550 /* Pods-InjectStory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3M78FF338K;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = InjectStory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.maciejgad.InjectStory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -469,8 +468,9 @@
 			baseConfigurationReference = 6D6F39A7B11D48AF32F628AA /* Pods-InjectStory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3M78FF338K;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = InjectStory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.maciejgad.InjectStory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -483,7 +483,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 3M78FF338K;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = InjectStoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.maciejgad.InjectStoryTests;
@@ -498,7 +498,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 3M78FF338K;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = InjectStoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.maciejgad.InjectStoryTests;
