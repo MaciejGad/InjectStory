@@ -8,10 +8,11 @@
 
 import Foundation
 
-class Injection<M> {
+public class Injection<M> {
     let defaultInit:(() -> M)
-    var overrideOnce:(() -> M)?
-    func inject() -> M {
+    public var overrideOnce:(() -> M)?
+    
+    public func inject() -> M {
         if let overrideOnce = overrideOnce {
             self.overrideOnce = nil
             return overrideOnce()
@@ -19,7 +20,7 @@ class Injection<M> {
         return defaultInit()
     }
     
-    init(_ defaultInit:@escaping ()->M) {
+    public init(_ defaultInit:@escaping ()->M) {
         self.defaultInit = defaultInit
     }
 }
