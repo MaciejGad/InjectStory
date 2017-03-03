@@ -20,7 +20,7 @@ public class Injection<M> {
         return defaultInit()
     }
     
-    public init(_ defaultInit:@escaping ()->M) {
+    public init(_ defaultInit: @escaping @autoclosure ()->M) {
         self.defaultInit = defaultInit
     }
 }
