@@ -10,11 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    static let viewModelInjection = Injection<CatViewModelProtocol>({
-        //return DogViewModel()
-        //returning wrong class in impossible
-        return CatViewModel()
-    })
+    static let viewModelInjection = Injection<CatViewModelProtocol>(CatViewModel())
     
     let viewModel:CatViewModelProtocol = viewModelInjection.inject()
 
@@ -29,4 +25,3 @@ class ViewController: UIViewController {
         mowLabel.text = viewModel.mow()
     }
 }
-
