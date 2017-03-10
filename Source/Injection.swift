@@ -24,3 +24,20 @@ public class Injection<M> {
         self.defaultInit = defaultInit
     }
 }
+
+public class ArgumentedInjection<M,N> {
+    let defaultInit:((N) -> M)
+    public var overrideOnce:((N) -> M)?
+    
+    public func inject(argument:N) -> M {
+        if let overrideOnce = overrideOnce {
+            self.overrideOnce = nil
+            return overrideOnce(argument)
+        }
+        return defaultInit(argument)
+    }
+    
+    public init(_ defaultInit: @escaping (N)->M) {
+        self.defaultInit = defaultInit
+    }
+}
