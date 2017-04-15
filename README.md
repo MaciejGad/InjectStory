@@ -33,6 +33,22 @@ ViewController.viewModelInjection.overrideOnce = { MockAnimalSound() }
 ```
 (where `MockAnimalSound` must implement `AnimalSound` protocol)
 
+# Installation
+
+Use the [CocoaPods](http://github.com/CocoaPods/CocoaPods).
+
+Add to your Podfile
+>`pod 'InjectStory'`
+
+and then call
+
+>`pod install`
+
+and import 
+
+>`import InjectStory`
+
+
 # Example
 
 ```swift
