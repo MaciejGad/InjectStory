@@ -1,0 +1,10 @@
+language: swift
+
+before_install:
+    - pod --version
+    - pod setup --silent
+    - pod repo update --silent
+    
+script:
+    - pod lib lint
+    - xcodebuild -project Demo/InjectStory.xcodeproj | xcpretty
