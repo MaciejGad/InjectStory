@@ -8,24 +8,18 @@
 
 import Foundation
 
-class DogViewModel {
-    func woof() -> String {
+protocol AnimalSound {
+    func makeSound() -> String
+}
+
+class DogViewModel:AnimalSound {
+    func makeSound() -> String {
         return "woof, woof"
     }
 }
 
-protocol CatViewModelProtocol {
-    func mow() -> String
-}
-
-class CatViewModel: CatViewModelProtocol {
-    func mow() -> String{
+class CatViewModel: AnimalSound {
+    func makeSound() -> String{
         return "mow"
-    }
-}
-
-class TestViewModel: CatViewModelProtocol {
-    func mow() -> String{
-        return "mow test"
     }
 }

@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    static let viewModelInjection = Injection<CatViewModelProtocol>(CatViewModel())
+    static let viewModelInjection = Injection<AnimalSound>(CatViewModel())
     
-    let viewModel:CatViewModelProtocol = viewModelInjection.inject()
+    let viewModel:AnimalSound = viewModelInjection.inject()
 
-    @IBOutlet weak var mowLabel: UILabel!
+    @IBOutlet weak var soundLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mowLabel.text = viewModel.mow()
+        soundLabel.text = viewModel.makeSound()
     }
 }
+
