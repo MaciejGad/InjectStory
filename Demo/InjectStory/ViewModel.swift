@@ -20,6 +20,6 @@ class DogViewModel:AnimalSound {
 
 class CatViewModel: AnimalSound {
     func makeSound() -> String{
-        return "mow"
+        return "meow"
     }
 }

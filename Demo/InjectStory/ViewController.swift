@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     static let viewModelInjection = Injection<AnimalSound>(CatViewModel())
     
-    let viewModel:AnimalSound = viewModelInjection.inject()
+    let viewModel = viewModelInjection.inject()
 
     @IBOutlet weak var soundLabel: UILabel!
     

@@ -11,7 +11,7 @@ import XCTest
 
 class InjectStoryTests: XCTestCase {
     
-    func testIfViewControllerCallMowMrthod() {
+    func testIfViewControllerCallMeowMethod() {
         //given
         let spy = AnimalSoundSpy()
         //override value returned by viewModelInjection
