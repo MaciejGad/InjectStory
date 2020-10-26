@@ -11,8 +11,12 @@ import Foundation
 public class Injection<M> {
     let defaultInit:(() -> M)
     public var overrideOnce:(() -> M)?
+    public var override:(() -> M)?
     
     public func inject() -> M {
+        if let override = override {
+            return override()
+        }
         if let overrideOnce = overrideOnce {
             self.overrideOnce = nil
             return overrideOnce()
@@ -23,13 +27,22 @@ public class Injection<M> {
     public init(_ defaultInit: @escaping @autoclosure ()->M) {
         self.defaultInit = defaultInit
     }
+    
+    public func reset() {
+        override = nil
+        overrideOnce = nil
+    }
 }
 
 public class ArgumentedInjection<M,N> {
     let defaultInit:((N) -> M)
     public var overrideOnce:((N) -> M)?
+    public var override:((N) -> M)?
     
     public func inject(argument:N) -> M {
+        if let override = override {
+            return override(argument)
+        }
         if let overrideOnce = overrideOnce {
             self.overrideOnce = nil
             return overrideOnce(argument)
@@ -39,5 +52,10 @@ public class ArgumentedInjection<M,N> {
     
     public init(_ defaultInit: @escaping (N)->M) {
         self.defaultInit = defaultInit
+    }
+    
+    public func reset() {
+        override = nil
+        overrideOnce = nil
     }
 }
